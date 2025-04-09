@@ -13,10 +13,11 @@ public class App {
             System.out.println("1. Suma de numeros enteros consecutivos");
             System.out.println("2. Potencia de numeros");
             System.out.println("3. Suma de digitos de un numero");
+            System.out.println("4. Fibonacci");
             int metodo = scanner.nextInt();
             int numero = 0;
             int resultado = 0;
-            if (metodo == 4) {
+            if (metodo == 5) {
                 contunuar = false;
                 break;
             }
@@ -51,7 +52,15 @@ public class App {
                     System.out.println(" = "+ resultado);
 
                     break;
+                case 4:
+                    System.out.println("Metodo fibonacci");
+                    Fibonacci fibonacci = new Fibonacci();
+                    System.out.println("Ingrese un numero");
+                    numero = scanner.nextInt();
+                    resultado = fibonacci.fibonacci(numero);
+                    System.out.println("El resultado es= "+resultado);
 
+                    break;
 
                 default:
                     System.out.println("Opcion Incorrecta");
